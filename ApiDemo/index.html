@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+    <table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>cnName</th>
+                <th>enName</th>
+                <th>deptID</th>
+                <th>pwd</th>
+                <th>sex</th>
+                <th>age</th>
+                <th>qq</th>
+                <th>mobile</th>
+                <th>email</th>
+                <th>state</th>
+            </tr>
+        </thead>
+    </table>
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "ajax": "http://localhost:55837/users/all",
+                "columns": [
+                    { "data": "id" },
+                    { "data": "cnName" },
+                    { "data": "enName" },
+                    { "data": "deptID" },
+                    { "data": "pwd" },
+                    { "data": "sex" },
+                    { "data": "age" },
+                    { "data": "qq" },
+                    { "data": "mobile" },
+                    { "data": "email" },
+                    { "data": "state" },
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
